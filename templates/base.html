@@ -1,0 +1,15 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'templates/style.css' %}">
+</head>
+<body>
+    <nav class="flex justify-center"> {% block content %}{% endblock %} <a href="./">Home</a> <a href="./about">About</a></nav>
+</body>
+</html>
