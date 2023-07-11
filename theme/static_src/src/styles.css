@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-h1
-{
-background-color: blue;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(39, 38, 38);
+    color: white;
+    
 }
-
-a
-{
-background-color: blue;
+a{
+    text-decoration: none;
+    color: white;
 }
