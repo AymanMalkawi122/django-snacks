@@ -5,7 +5,6 @@ from django.urls import reverse
 class TestHome(SimpleTestCase):
     def test_status_code(self):
         url = reverse('home')
-        print("\nhome URL:",url)
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
@@ -13,7 +12,7 @@ class TestHome(SimpleTestCase):
     def test_home_page_templates(self):
         url = reverse('home')
         response = self.client.get(url)
-        self.assertTemplateUsed(response,  'base.html')
+        self.assertTemplateUsed(response, 'base.html')
 
 
 class TestAbout(SimpleTestCase):
