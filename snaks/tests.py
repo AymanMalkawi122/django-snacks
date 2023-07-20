@@ -12,7 +12,8 @@ class TestHome(SimpleTestCase):
     def test_home_page_templates(self):
         url = reverse('home')
         response = self.client.get(url)
-        self.assertTemplateUsed(response, 'base.html')
+        print(url)
+        self.assertTemplateUsed(response, 'home.html', 'base.html')
 
 
 class TestAbout(SimpleTestCase):
